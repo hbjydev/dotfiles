@@ -1,0 +1,42 @@
+# Shell integration is sourced and configured manually
+shell-integration = none
+
+background = #161616
+background-opacity = 0.900000
+cursor-color = #f2f4f8
+font-family = GeistMono Nerd Font
+font-size = 14
+foreground = #f2f4f8
+macos-option-as-alt = false
+palette = 0=#161616
+palette = 8=#525252
+palette = 1=#3ddbd9
+palette = 9=#78a9ff
+palette = 2=#33b1ff
+palette = 10=#262626
+palette = 3=#ee5396
+palette = 11=#393939
+palette = 4=#42be65
+palette = 12=#dde1e6
+palette = 5=#be95ff
+palette = 13=#ffffff
+palette = 6=#ff7eb6
+palette = 14=#82cfff
+palette = 7=#f2f4f8
+palette = 15=#08bdba
+selection-invert-fg-bg = true
+window-decoration = true
+window-padding-x = 16
+window-padding-y = 16
+window-theme = dark
+
+keybind = alt+left=esc:b
+keybind = alt+right=esc:f
+keybind = ctrl+shift+down=goto_split:bottom
+keybind = ctrl+shift+enter=new_split:auto
+keybind = ctrl+shift+left=goto_split:left
+keybind = ctrl+shift+left_bracket=previous_tab
+keybind = ctrl+shift+right=goto_split:right
+keybind = ctrl+shift+right_bracket=next_tab
+keybind = ctrl+shift+up=goto_split:top
+

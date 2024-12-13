@@ -1,0 +1,22 @@
+Include config.d/*
+
+Host *
+  SetEnv TERM="xterm-256color"
+  {{ if eq .chezmoi.os "darwin" -}}
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+  User hyoung
+  {{ else }}
+  IdentityAgent "~/.1password/agent.sock"
+  {{ end }}
+
+Host *
+  ForwardAgent yes
+  AddKeysToAgent no
+  Compression yes
+  ServerAliveInterval 0
+  ServerAliveCountMax 3
+  HashKnownHosts no
+  UserKnownHostsFile ~/.ssh/known_hosts
+  ControlMaster auto
+  ControlPath /tmp/ssh.%r.%n.%p
+  ControlPersist 10m
