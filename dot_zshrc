@@ -79,3 +79,5 @@ alias -- vi=nvim
 alias -- vim=nvim
 alias -- watch=viddy
 alias -- wt='git worktree'
+
+export EDITOR="nvim"
