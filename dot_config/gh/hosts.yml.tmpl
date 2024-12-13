@@ -1,0 +1,11 @@
+{{ $token := onepasswordRead "op://dots/gh-cli-token/password" }}
+
+github.com:
+  oauth_token: "{{ $token }}"
+  user: hbjydev
+  git_protocol: https
+  users:
+    hbjydev:
+      oauth_token: "{{ $token }}"
+
+# vim:ft=yaml
