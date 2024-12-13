@@ -1,23 +1,23 @@
 [alias]
-	a = "add"
-	b = "branch"
-	ch = "checkout"
-	ci = "commit"
-	cm = "commit -m"
-	d = "diff"
-	ds = "diff --staged"
-	l = "log --pretty=oneline --abbrev-commit"
-	p = "pull"
-	pp = "push"
-	s = "status -s"
-	wt = "worktree"
+  a = "add"
+  b = "branch"
+  ch = "checkout"
+  ci = "commit"
+  cm = "commit -m"
+  d = "diff"
+  ds = "diff --staged"
+  l = "log --pretty=oneline --abbrev-commit"
+  p = "pull"
+  pp = "push"
+  s = "status -s"
+  wt = "worktree"
 
 [commit]
-	gpgsign = true
-	verbose = false
+  gpgsign = true
+  verbose = false
 
 [core]
-	pager = "delta"
+  pager = "delta"
 
 [credential "https://gist.github.com"]
   helper =
@@ -28,55 +28,55 @@
   helper = "!/opt/homebrew/bin/gh auth git-credential"
 
 [credential "https://gitlab.zoodigital.com"]
-	helper = "glab auth git-credential"
+  helper = "glab auth git-credential"
 
 [delta "decorations"]
-	commit-decoration-style = "blue ol"
-	commit-style = "raw"
-	file-style = "omit"
-	hunk-header-decoration-style = "blue box"
-	hunk-header-file-style = "red"
-	hunk-header-line-number-style = "#067a00"
-	hunk-header-style = "file line-number syntax"
+  commit-decoration-style = "blue ol"
+  commit-style = "raw"
+  file-style = "omit"
+  hunk-header-decoration-style = "blue box"
+  hunk-header-file-style = "red"
+  hunk-header-line-number-style = "#067a00"
+  hunk-header-style = "file line-number syntax"
 
 [delta "interactive"]
-	keep-plus-minus-markers = false
+  keep-plus-minus-markers = false
 
 [gpg]
-	format = "ssh"
+  format = "ssh"
 
 [gpg "ssh"]
   {{ if eq .chezmoi.os "darwin" -}}
-	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
   {{ else }}
   program = "/opt/1Password/bin/op-ssh-sign"
   {{- end }}
 
 [init]
-	defaultBranch = "main"
+  defaultBranch = "main"
 
 [interactive]
-	diffFilter = "delta --color-only"
+  diffFilter = "delta --color-only"
 
 [pull]
-	rebase = true
+  rebase = true
 
 [push]
-	autoSetupRemote = true
-	default = "simple"
+  autoSetupRemote = true
+  default = "simple"
 
 [rebase]
-	autoStash = true
+  autoStash = true
 
 [user]
   {{ if eq .chezmoi.os "darwin" -}}
-	email = "hayden.young@zoodigital.com"
+  email = "hayden.young@zoodigital.com"
   {{ else -}}
-	email = "22327045+hbjydev@users.noreply.github.com"
+  email = "22327045+hbjydev@users.noreply.github.com"
   {{ end -}}
-	name = "Hayden Young"
+  name = "Hayden Young"
   {{ if eq .chezmoi.os "darwin" -}}
-	signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICdUGldjr+KGTEcc1XHlpNGRSvBeuPH2fBJz27+28Klw"
+  signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICdUGldjr+KGTEcc1XHlpNGRSvBeuPH2fBJz27+28Klw"
   {{ else -}}
   signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDkhuhfzyg7R+O62XSktHufGmmhy6FNDi/NuPPJt7bI+"
   {{- end -}}
