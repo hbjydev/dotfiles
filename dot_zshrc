@@ -22,6 +22,9 @@ export PATH="$PATH:$HOME/.local/bin"
 if [[ -d "/opt/homebrew/bin" ]]; then
   export PATH="/opt/homebrew/bin:$PATH"
 fi
+if [[ -d "/home/linuxbrew" ]]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
 if [[ -d "$HOME/.cargo" ]]; then
   . "$HOME/.cargo/env"
 fi
