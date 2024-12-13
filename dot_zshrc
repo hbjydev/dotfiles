@@ -18,8 +18,10 @@ unsetopt HIST_EXPIRE_DUPS_FIRST
 setopt SHARE_HISTORY
 unsetopt EXTENDED_HISTORY
 
-# eval "$(k9s completion zsh)"
 export PATH="$PATH:$HOME/.local/bin"
+if [[ -d "/opt/homebrew/bin" ]]; then
+  export PATH="/opt/homebrew/bin:$PATH"
+fi
 if [[ -d "$HOME/.cargo" ]]; then
   . "$HOME/.cargo/env"
 fi
