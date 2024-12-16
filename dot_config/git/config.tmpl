@@ -25,24 +25,21 @@
   helper = "!/opt/homebrew/bin/gh auth git-credential"
   {{ else -}}
   helper = "!/home/linuxbrew/bin/gh auth git-credential"
-  {{ end -}}
-
+  {{- end }}
 [credential "https://github.com"]
   helper =
   {{ if eq .chezmoi.os "darwin" -}}
   helper = "!/opt/homebrew/bin/gh auth git-credential"
   {{ else -}}
   helper = "!/home/linuxbrew/bin/gh auth git-credential"
-  {{ end -}}
-
+  {{- end }}
 [credential "https://gitlab.zoodigital.com"]
   helper =
   {{ if eq .chezmoi.os "darwin" -}}
   helper = "!/opt/homebrew/bin/glab auth git-credential"
   {{ else -}}
   helper = "!/home/linuxbrew/bin/glab auth git-credential"
-  {{ end -}}
-
+  {{- end }}
 [delta "decorations"]
   commit-decoration-style = "blue ol"
   commit-style = "raw"
