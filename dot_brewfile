@@ -1,6 +1,8 @@
 tap "homebrew/bundle"
+tap "hbjydev/tap"
 
 brew "age"
+brew "atfile"
 brew "awscli"
 brew "bat"
 brew "chezmoi"
