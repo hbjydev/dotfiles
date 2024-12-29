@@ -37,6 +37,9 @@ fi
 if [[ -d "$HOME/.deno" ]]; then
   export PATH="$PATH:$HOME/.deno/bin"
 fi
+if [[ -d "$HOME/.bun" ]]; then
+  export PATH="$PATH:$HOME/.bun/bin"
+fi
 if [[ -d "$HOME/.local/share/pyenv" ]]; then
   export PYENV_ROOT="/Users/haydenyoung/.local/share/pyenv"
   eval "$(pyenv init - zsh)"
