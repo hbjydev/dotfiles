@@ -33,6 +33,7 @@ brew "mysql-client@8.0" if OS.mac?
 cask "amazon-chime" if OS.mac?
 cask "arc" if OS.mac?
 cask "discord" if OS.mac?
+cask "ghostty" if OS.mac?
 cask "keymapp" if OS.mac?
 cask "microsoft-teams" if OS.mac?
 cask "orbstack" if OS.mac?
