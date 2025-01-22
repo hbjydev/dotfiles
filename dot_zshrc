@@ -40,10 +40,6 @@ fi
 if [[ -d "$HOME/.bun" ]]; then
   export PATH="$PATH:$HOME/.bun/bin"
 fi
-if [[ -d "$HOME/.local/share/pyenv" ]]; then
-  export PYENV_ROOT="/Users/haydenyoung/.local/share/pyenv"
-  eval "$(pyenv init - zsh)"
-fi
 eval "$(direnv hook zsh)"
 
 if [[ $TERM != "dumb" ]]; then
