@@ -18,6 +18,8 @@ unsetopt HIST_EXPIRE_DUPS_FIRST
 setopt SHARE_HISTORY
 unsetopt EXTENDED_HISTORY
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 export PATH="$PATH:$HOME/.local/bin"
 if [[ -d "/opt/homebrew" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
