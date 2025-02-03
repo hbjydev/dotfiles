@@ -44,6 +44,10 @@ if [[ -d "$HOME/.bun" ]]; then
 fi
 eval "$(direnv hook zsh)"
 
+if [[ -d "/home/linuxbrew/.linuxbrew/opt/asdf" ]]; then
+  . /home/linuxbrew/.linuxbrew/opt/asdf/libexec/asdf.sh
+fi
+
 if [[ $TERM != "dumb" ]]; then
   eval "$(starship init zsh)"
 fi
