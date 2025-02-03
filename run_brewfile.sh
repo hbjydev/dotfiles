@@ -1,3 +1,3 @@
-#!/bin/sh
-export XDG_CONFIG_HOME="$HOME/.config"
+#!/usr/bin/env zsh
+source "$HOME/.zshrc"
 brew bundle --global
