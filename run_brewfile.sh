@@ -1,3 +1,3 @@
 #!/usr/bin/env zsh
-source "$HOME/.zshrc"
+export HOMEBREW_BUNDLE_FILE_GLOBAL="$HOME/.config/homebrew/Brewfile"
 brew bundle --global
