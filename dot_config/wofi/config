@@ -1,0 +1,6 @@
+no_actions=true
+width=450
+height=350
+term=ghostty
+allow_images=true
+hide_scroll=true

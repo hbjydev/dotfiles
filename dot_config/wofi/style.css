@@ -22,27 +22,51 @@
 
 window {
   background-color: @base00;
-  color: @base05;
+  color: @base04;
+  margin: 0px;
+  border: 2px solid @base0E;
+  border-radius: 8px;
 }
 
 #input {
-  background-color: @base00;
-  border-radius: 2px;
-  border: 2px solid @base03;
+  margin: 5px;
+  border: none;
+  background-color: @base01;
   color: @base05;
-  margin-bottom: 8px;
+  padding: 8px 16px;
 }
 
 #inner-box {
+  margin: 5px;
   background-color: @base00;
-  border-radius: 2px;
-  border: 2px solid @base03;
+  border: none;
 }
 
 #outer-box {
-  margin: 8px;
+  margin: 16px;
+  border-radius: 8px;
+}
+
+#entry {
+  padding: 8px;
+  color: @base03;
+}
+
+#entry > #text {
+  color: @base03;
+}
+
+#img {
+  margin-right: 10px;
+  opacity: 0.3;
 }
 
 #entry:selected {
-background-color: @base03;
+  background-color: @base0E;
+  border-radius: 8px;
+}
+
+#entry:selected #img {
+  margin-right: 10px;
+  opacity: 1;
 }

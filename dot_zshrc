@@ -44,6 +44,10 @@ if [[ -d "$HOME/.bun" ]]; then
 fi
 eval "$(direnv hook zsh)"
 
+if [[ -f "$HOME/.local/bin/dagger" ]]; then
+  eval "$(dagger completion zsh)"
+fi
+
 if [[ -d "/home/linuxbrew/.linuxbrew/opt/asdf" ]]; then
   . /home/linuxbrew/.linuxbrew/opt/asdf/libexec/asdf.sh
 fi

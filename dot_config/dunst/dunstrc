@@ -39,7 +39,7 @@
     # Offset from the origin
     # NOTE: Dunst from version 1.11 and older use this alternative notation
     # offset = 10x50
-    offset = (32, 32)
+    offset = (16, 16)
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -102,7 +102,7 @@
     horizontal_padding = 8
 
     # Padding between text and icon.
-    text_icon_padding = 0
+    text_icon_padding = 4
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
@@ -142,7 +142,7 @@
 
     ### Text ###
 
-    font = GeistMono NF 10
+    font = GeistMono NF 12
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.

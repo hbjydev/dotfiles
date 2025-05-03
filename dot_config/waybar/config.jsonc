@@ -4,25 +4,18 @@
   "height": 28,
   "spacing": 16,
 
-  "modules-left": [ "hyprland/workspaces" ],
-  "modules-center": [ "hyprland/window" ],
-  "modules-right": [
-    "idle_inhibitor",
-    "pulseaudio",
-    "clock",
-    "tray"
-  ],
+  "modules-left": [ "pulseaudio" ],
+  "modules-center": [ "hyprland/workspaces" ],
+  "modules-right": [ "tray", "clock" ],
 
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": ""
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "*": 5
     }
   },
   "tray": {
-    "icon-size": 21,
-    "spacing": 10
+    "icon-size": 18,
+    "spacing": 8
   },
   "clock": {
     // "timezone": "America/New_York",
@@ -31,11 +24,11 @@
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
-    "format": "{volume}% {icon} {format_source}",
+    "format": "  {volume}%",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
-    "format-source": "{volume}% ",
+    "format-muted": " ",
+    "format-source": " {volume}%",
     "format-source-muted": "",
     "format-icons": {
       "headphone": "",
@@ -44,11 +37,7 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": [
-        "",
-        "",
-        ""
-      ]
+      "default": [ "", "", "" ]
     },
     "on-click": "pavucontrol"
   }
