@@ -74,7 +74,7 @@ button:hover {
   background-color: @base0F;
 }
 
-#workspaces button.empty {
+#workspaces button.empty:not(.active) {
   color: @base03;
 }
 
