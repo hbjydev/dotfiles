@@ -1,2 +1,3 @@
 [directory]
-home_symbol = "🏠"
+truncate_to_repo = true
+truncation_length = 8
