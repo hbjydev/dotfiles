@@ -1,3 +1,6 @@
+#!/bin/bash
+
+brew bundle --file=/dev/stdin <<EOF
 tap "homebrew/bundle"
 
 brew "age"
@@ -28,6 +31,7 @@ cask "1password-cli"
 
 # os-specific
 brew "mysql-client@8.0" if OS.mac?
+brew "nginx" if OS.mac?
 cask "amazon-chime" if OS.mac?
 cask "arc" if OS.mac?
 cask "discord" if OS.mac?
@@ -47,3 +51,4 @@ mas "Parcel", id: 639968404
 mas "PayPal Honey", id: 1472777122
 mas "Xcode", id: 497799835
 mas "Yubico Authenticator", id: 1497506650
+EOF
