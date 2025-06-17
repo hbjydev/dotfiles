@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# hash: {{ includeTemplate "dot_config/mise/config.toml.tmpl" | sha256sum }}
+mise install
