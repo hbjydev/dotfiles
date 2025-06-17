@@ -1,9 +1,12 @@
-Include config.d/*
+{{ if stat (joinPath .chezmoi.homeDir ".orbstack") -}}
+Include ~/.orbstack/ssh/config
+{{- end }}
+Include ~/.ssh/config.d/*
 
 Host *
   SetEnv TERM="xterm-256color"
   User {{ if contains .workspace "work" }}hyoung{{ else }}hayden{{ end }}
-  IdentityAgent {{ .ssh.agentPath | quote }}
+  IdentityAgent ~/.1password/agent.sock
 
 Host *
   ForwardAgent yes
