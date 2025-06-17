@@ -1,8 +1,12 @@
 # `dots.sh`
 
-My dotfiles, lovingly managed with Chezmoi.
+My dotfiles, lovingly managed with [Chezmoi](https://chezmoi.io).
 
 ![My desktop in Hyprland](./.screenshot.png)
+
+```
+chezmoi init hbjydev/dots.sh
+```
 
 ## License
 
