@@ -58,17 +58,9 @@
   {{- end }}
 
 [user]
-  {{ if .isWork -}}
-  email = "{{ onepasswordRead "op://dots/git/email-work" }}"
-  {{ else -}}
-  email = "{{ onepasswordRead "op://dots/git/email-personal" }}"
-  {{ end -}}
   name = "{{ .name }}"
-  {{ if .isWork -}}
-  signingKey = "{{ onepasswordRead "op://ZOO Digital/ssh-zoo/public key" }}"
-  {{ else -}}
-  signingKey = "{{ onepasswordRead "op://Personal/ssh-personal/public key" }}"
-  {{- end -}}
+  email = {{ .git.email | quote }}
+  signingKey = {{ .git.signingKey | quote }}
 
 # credential helpers
 [credential "https://gist.github.com"]

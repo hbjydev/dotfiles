@@ -9,3 +9,15 @@ data:
   name: Hayden Young
   brewPath: {{ $brewPath }}
   isWork: {{ $isWork }}
+
+  git:
+    {{- if $isWork }}
+    email: {{ onepasswordRead "op://dots/git/email-work" | quote }}
+    {{- else }}
+    email: {{ onepasswordRead "op://dots/git/email-personal" | quote }}
+    {{- end }}
+    {{- if .isWork }}
+    signingKey: {{ onepasswordRead "op://ZOO Digital/ssh-zoo/public key" | quote }}
+    {{- else }}
+    signingKey: {{ onepasswordRead "op://Personal/ssh-personal/public key" | quote }}
+    {{- end }}
