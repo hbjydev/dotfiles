@@ -1,6 +1,8 @@
 {{- $choices := list "private" "work" -}}
 {{- $workspace := promptChoiceOnce . "workspace" "Workspace?" $choices "private" -}}
 
+{{- $wsl := promptBoolOnce . "wsl" "WSL?" -}}
+
 {{- $brewPath := "" -}}
 {{- if eq .chezmoi.os "darwin" -}}{{- $brewPath = "/opt/homebrew" -}}
 {{- else -}}{{- $brewPath = "/home/linuxbrew/.linuxbrew" -}}{{- end -}}
@@ -13,6 +15,7 @@ format: yaml
 progress: true
 data:
   workspace: {{ $workspace }}
+  wsl: {{ $wsl }}
 
   brewPath: {{ $brewPath }}
 
