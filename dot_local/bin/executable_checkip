@@ -1,3 +1,0 @@
-#!/bin/sh
-set -e
-curl -w '%{stdout}\n' checkip.amazonaws.com

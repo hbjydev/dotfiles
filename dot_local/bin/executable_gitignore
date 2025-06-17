@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-set -euo pipefail
-curl -SL "toptal.com/developers/gitignore/api/$1" > .gitignore

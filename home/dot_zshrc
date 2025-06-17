@@ -20,6 +20,7 @@ unsetopt EXTENDED_HISTORY
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
+# PATH variables
 export PATH="$PATH:$HOME/.local/bin"
 if [[ -d "/opt/homebrew" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -43,11 +44,17 @@ if [[ -d "$HOME/.bun" ]]; then
   export PATH="$PATH:$HOME/.bun/bin"
 fi
 eval "$(direnv hook zsh)"
+<<<<<<< HEAD:dot_zshrc
 
 if [[ -f "$HOME/.local/bin/dagger" ]]; then
   eval "$(dagger completion zsh)"
 fi
 
+=======
+if command -v mise > /dev/null; then
+  eval "$(mise activate zsh)"  
+fi
+>>>>>>> f02bbb6 (feat: restructuring):home/dot_zshrc
 if [[ -d "/home/linuxbrew/.linuxbrew/opt/asdf" ]]; then
   . /home/linuxbrew/.linuxbrew/opt/asdf/libexec/asdf.sh
 fi
