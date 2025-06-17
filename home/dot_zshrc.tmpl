@@ -24,18 +24,6 @@ eval "$(direnv hook zsh)"
 eval "$(mise activate zsh)"  
 eval "$(starship init zsh)"
 
-if [[ -d "$HOME/.cargo" ]]; then
-  . "$HOME/.cargo/env"
-fi
-if [[ -d "$HOME/.volta" ]]; then
-  export PATH="$PATH:$HOME/.volta/bin"
-fi
-if [[ -d "$HOME/.fly" ]]; then
-  export PATH="$PATH:$HOME/.fly/bin"
-fi
-if [[ -d "$HOME/.deno" ]]; then
-  export PATH="$PATH:$HOME/.deno/bin"
-fi
 if [[ -d "$HOME/.bun" ]]; then
   export PATH="$PATH:$HOME/.bun/bin"
 fi
