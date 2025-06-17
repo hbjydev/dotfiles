@@ -1,8 +1,6 @@
 #!/bin/bash
 
 brew bundle --file=/dev/stdin <<EOF
-tap "homebrew/bundle"
-
 brew "age"
 brew "awscli"
 brew "bat"
