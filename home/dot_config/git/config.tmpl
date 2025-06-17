@@ -1,3 +1,19 @@
+[init]
+  defaultBranch = "main"
+
+[interactive]
+  diffFilter = "delta --color-only"
+
+[pull]
+  rebase = true
+
+[push]
+  autoSetupRemote = true
+  default = "simple"
+
+[rebase]
+  autoStash = true
+
 [alias]
   a = "add"
   b = "branch"
@@ -19,27 +35,6 @@
 [core]
   pager = "delta"
 
-[credential "https://gist.github.com"]
-  helper =
-  {{ if eq .chezmoi.os "darwin" -}}
-  helper = "!/opt/homebrew/bin/gh auth git-credential"
-  {{ else -}}
-  helper = "!/home/linuxbrew/.linuxbrew/bin/gh auth git-credential"
-  {{- end }}
-[credential "https://github.com"]
-  helper =
-  {{ if eq .chezmoi.os "darwin" -}}
-  helper = "!/opt/homebrew/bin/gh auth git-credential"
-  {{ else -}}
-  helper = "!/home/linuxbrew/.linuxbrew/bin/gh auth git-credential"
-  {{- end }}
-[credential "https://gitlab.zoodigital.com"]
-  helper =
-  {{ if eq .chezmoi.os "darwin" -}}
-  helper = "!/opt/homebrew/bin/glab auth git-credential"
-  {{ else -}}
-  helper = "!/home/linuxbrew/.linuxbrew/bin/glab auth git-credential"
-  {{- end }}
 [delta "decorations"]
   commit-decoration-style = "blue ol"
   commit-style = "raw"
@@ -62,31 +57,26 @@
   program = "/opt/1Password/op-ssh-sign"
   {{- end }}
 
-[init]
-  defaultBranch = "main"
-
-[interactive]
-  diffFilter = "delta --color-only"
-
-[pull]
-  rebase = true
-
-[push]
-  autoSetupRemote = true
-  default = "simple"
-
-[rebase]
-  autoStash = true
-
 [user]
-  {{ if eq .chezmoi.os "darwin" -}}
-  email = "hayden.young@zoodigital.com"
+  {{ if .isWork -}}
+  email = "{{ onepasswordRead "op://dots/git/email-work" }}"
   {{ else -}}
-  email = "22327045+hbjydev@users.noreply.github.com"
+  email = "{{ onepasswordRead "op://dots/git/email-personal" }}"
   {{ end -}}
-  name = "Hayden Young"
-  {{ if eq .chezmoi.os "darwin" -}}
-  signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICdUGldjr+KGTEcc1XHlpNGRSvBeuPH2fBJz27+28Klw"
+  name = "{{ .name }}"
+  {{ if .isWork -}}
+  signingKey = "{{ onepasswordRead "op://ZOO Digital/ssh-zoo/public key" }}"
   {{ else -}}
-  signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDkhuhfzyg7R+O62XSktHufGmmhy6FNDi/NuPPJt7bI+"
+  signingKey = "{{ onepasswordRead "op://Personal/ssh-personal/public key" }}"
   {{- end -}}
+
+# credential helpers
+[credential "https://gist.github.com"]
+  helper =
+  helper = "!{{ .brewPath }}/bin/gh auth git-credential"
+[credential "https://github.com"]
+  helper =
+  helper = "!{{ .brewPath }}/bin/gh auth git-credential"
+[credential "https://gitlab.zoodigital.com"]
+  helper =
+  helper = "!{{ .brewPath }}/bin/glab auth git-credential"

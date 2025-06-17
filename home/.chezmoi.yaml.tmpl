@@ -1,4 +1,11 @@
+{{- $isWork := promptBoolOnce . "isWork" "Is this your work computer?" -}}
+
+{{- $brewPath := "" -}}
+{{- if eq .chezmoi.os "darwin" -}}{{- $brewPath = "/opt/homebrew" -}}
+{{- else -}}{{- $brewPath = "/home/linuxbrew/.linuxbrew" -}}{{- end -}}
 ---
 format: yaml
 data:
   name: Hayden Young
+  brewPath: {{ $brewPath }}
+  isWork: {{ $isWork }}
