@@ -58,7 +58,7 @@
   {{- end }}
 
 [user]
-  name = "{{ .name }}"
+  name = {{ .git.name | quote }}
   email = {{ .git.email | quote }}
   signingKey = {{ .git.signingKey | quote }}
 

@@ -1,23 +1,31 @@
-{{- $isWork := promptBoolOnce . "isWork" "Is this your work computer?" -}}
+{{- $choices := list "private" "work" -}}
+{{- $workspace := promptChoiceOnce . "workspace" "Workspace?" $choices "private" -}}
 
 {{- $brewPath := "" -}}
 {{- if eq .chezmoi.os "darwin" -}}{{- $brewPath = "/opt/homebrew" -}}
 {{- else -}}{{- $brewPath = "/home/linuxbrew/.linuxbrew" -}}{{- end -}}
+
+{{- $sshAgentPath := "" -}}
+{{- if eq .chezmoi.os "darwin" -}}{{- $sshAgentPath = "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock" -}}
+{{- else -}}{{- $sshAgentPath = "~/.1password/agent.sock" -}}{{- end -}}
 ---
 format: yaml
+progress: true
 data:
-  name: Hayden Young
+  workspace: {{ $workspace }}
+
   brewPath: {{ $brewPath }}
-  isWork: {{ $isWork }}
+
+  ssh:
+    agentPath: {{ $sshAgentPath }}
 
   git:
-    {{- if $isWork }}
+    {{- if contains $workspace "work" }}
+    name: Hayden Young
     email: {{ onepasswordRead "op://dots/git/email-work" | quote }}
-    {{- else }}
-    email: {{ onepasswordRead "op://dots/git/email-personal" | quote }}
-    {{- end }}
-    {{- if .isWork }}
     signingKey: {{ onepasswordRead "op://ZOO Digital/ssh-zoo/public key" | quote }}
     {{- else }}
+    name: Hayden Young
+    email: {{ onepasswordRead "op://dots/git/email-personal" | quote }}
     signingKey: {{ onepasswordRead "op://Personal/ssh-personal/public key" | quote }}
     {{- end }}

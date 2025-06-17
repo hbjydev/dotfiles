@@ -2,12 +2,8 @@ Include config.d/*
 
 Host *
   SetEnv TERM="xterm-256color"
-  {{ if eq .chezmoi.os "darwin" -}}
-  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
-  User hyoung
-  {{ else }}
-  IdentityAgent "~/.1password/agent.sock"
-  {{ end }}
+  User {{ if contains .workspace "work" }}hyoung{{ else }}hayden{{ end }}
+  IdentityAgent {{ .ssh.agentPath | quote }}
 
 Host *
   ForwardAgent yes
