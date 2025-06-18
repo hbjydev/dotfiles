@@ -37,7 +37,7 @@ brew "volta"
 # os-specific
 brew "mysql-client@8.0" if OS.mac?
 brew "nginx" if OS.mac?
-cask "1password-cli"
+cask "1password-cli" if OS.mac?
 cask "amazon-chime" if OS.mac?
 cask "arc" if OS.mac?
 cask "discord" if OS.mac?
