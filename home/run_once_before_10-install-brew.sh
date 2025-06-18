@@ -1,2 +1,23 @@
-#!/bin/sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#!/usr/bin/env bash
+
+. /etc/os-release
+os="${ID_LIKE:-$ID}"
+
+case $os in
+  *arch* )
+    sudo pacman --sync --noconfirm base-devel procps-ng curl file git
+    ;;
+  *rhel* )
+    sudo dnf group install 'Development Tools'
+    sudo dnf install procps-ng curl file
+    ;;
+  *debian* )
+    sudo apt-get install build-essential procps curl file git
+    ;;
+  * )
+    echo "Unsupported OS"
+    exit 1
+    ;;
+esac
+
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
