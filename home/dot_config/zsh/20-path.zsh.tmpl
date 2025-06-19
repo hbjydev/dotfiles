@@ -1,0 +1,10 @@
+export PATH="$PATH:$HOME/.local/bin"
+eval "$({{ .brewPath }}/bin/brew shellenv)"
+eval "$(direnv hook zsh)"
+eval "$(mise activate zsh)"  
+eval "$(starship init zsh)"
+if [[ -d "$HOME/.bun" ]]; then
+  export PATH="$PATH:$HOME/.bun/bin"
+fi
+
+# vim:ft=zsh

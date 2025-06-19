@@ -1,68 +1,8 @@
-source "$HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
-source "$HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-
-HISTSIZE="10000"
-SAVEHIST="10000"
-HISTFILE="$HOME/.zsh_history"
-mkdir -p "$(dirname "$HISTFILE")"
-
-setopt HIST_FCNTL_LOCK
-setopt HIST_IGNORE_DUPS
-unsetopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_SPACE
-unsetopt HIST_EXPIRE_DUPS_FIRST
-setopt SHARE_HISTORY
-unsetopt EXTENDED_HISTORY
-
-export XDG_CONFIG_HOME="$HOME/.config"
-export EDITOR="nvim"
-export PATH="$PATH:$HOME/.local/bin"
-
-eval "$({{ .brewPath }}/bin/brew shellenv)"
-eval "$(direnv hook zsh)"
-eval "$(mise activate zsh)"  
-eval "$(starship init zsh)"
-
-if [[ -d "$HOME/.bun" ]]; then
-  export PATH="$PATH:$HOME/.bun/bin"
-fi
-
-if test -n "$GHOSTTY_RESOURCES_DIR"; then
-  autoload -Uz -- "$GHOSTTY_RESOURCES_DIR"/shell-integration/zsh/ghostty-integration
-  ghostty-integration
-  unfunction ghostty-integration
-fi
-
-# Aliases
-alias -- cat=bat
-alias -- dc='docker compose'
-alias -- dcc='docker compose cp'
-alias -- dcd='docker compose down'
-alias -- dce='docker compose exec'
-alias -- dci='docker compose inspect'
-alias -- dcl='docker compose logs'
-alias -- dclf='docker compose logs -f'
-alias -- dcr='docker compose restart'
-alias -- dcu='docker compose up'
-alias -- eza='eza --icons --git'
-alias -- g=git
-alias -- k=kubectl
-alias -- kj='kubectl -o json'
-alias -- kw='kubectl -o wide'
-alias -- ky='kubectl -o yaml'
-alias -- la='eza -a'
-alias -- lg=lazygit
-alias -- ll='eza -l'
-alias -- lla='eza -la'
-alias -- ls=eza
-alias -- lt='eza --tree'
-alias -- nb='nix build --json --no-link --print-build-logs'
-alias -- ops='op run --no-masking'
-alias -- s='doppler run'
-alias -- tf=terraform
-alias -- vi=nvim
-alias -- vim=nvim
-alias -- watch=viddy
-alias -- wt='git worktree'
+# Include configs from $XDG_CONFIG_HOME/zsh
+for file in ~/.config/zsh/*.zsh; do
+  if [ -f "$file" ]; then
+    source "$file"
+  fi
+done
 
 # vim:ft=zsh
