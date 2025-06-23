@@ -1,4 +1,4 @@
-{{ if ne .chezmoi.os "windows" }}
+{{- if ne .chezmoi.os "windows" -}}
 #!/bin/bash
 
 brew bundle --file=/dev/stdin <<EOF
@@ -59,4 +59,4 @@ mas "PayPal Honey", id: 1472777122
 mas "Xcode", id: 497799835
 mas "Yubico Authenticator", id: 1497506650
 EOF
-{{ end }}
+{{- end -}}

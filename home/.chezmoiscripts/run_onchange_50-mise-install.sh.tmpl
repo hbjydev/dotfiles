@@ -1,8 +1,8 @@
-{{ if ne .chezmoi.os "windows" }}
+{{- if ne .chezmoi.os "windows" -}}
 #!/usr/bin/env bash
 
 # hash: {{ includeTemplate "dot_config/mise/config.toml.tmpl" . | sha256sum }}
 mise install
 
 # vim:ft=bash
-{{ end }}
+{{- end -}}
