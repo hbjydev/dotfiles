@@ -1,0 +1,151 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions":
+    [
+        {
+            "command":
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+left"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+right"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+shift+d"
+        },
+        {
+            "command": "unbound",
+            "keys": "shift+insert"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste",
+            "keys": "ctrl+shift+v"
+        },
+        {
+            "command": "find",
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command":
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878",
+            "keys": "ctrl+shift+enter"
+        },
+        {
+            "command":
+            {
+                "action": "moveFocus",
+                "direction": "left"
+            },
+            "id": "User.moveFocus.2A0DA8E0",
+            "keys": "ctrl+shift+left"
+        },
+        {
+            "command":
+            {
+                "action": "moveFocus",
+                "direction": "right"
+            },
+            "id": "User.moveFocus.87C324ED",
+            "keys": "ctrl+shift+right"
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "newTabMenu":
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles":
+    {
+        "defaults":
+        {
+            "colorScheme": "Oxocarbon",
+            "font":
+            {
+                "face": "GeistMono Nerd Font"
+            },
+            "opacity": 87,
+            "useAcrylic": false
+        },
+        "list":
+        [
+            {
+                "commandline": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
+            },
+            {
+                "guid": "{398d4a22-7802-5051-8c8d-cf771177811e}",
+                "hidden": true,
+                "name": "archlinux",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{d3f31bee-5823-5ed8-8e04-f31ed54f2cd9}",
+                "hidden": false,
+                "name": "Fedora Remix for WSL",
+                "source": "Windows.Terminal.Wsl"
+            }
+        ]
+    },
+    "schemes": [
+        {
+            "name": "Oxocarbon",
+
+            "background": "#161616",
+            "black": "#161616",
+            "blue": "#78A9FF",
+            "brightBlack": "#262626",
+            "brightBlue": "#78A9FF",
+            "brightCyan": "#82CFFF",
+            "brightGreen": "#52BE65",
+            "brightPurple": "#BE95FF",
+            "brightRed": "#EE5396",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FF7EB6",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#82CFFF",
+            "foreground": "#F2F4F8",
+            "green": "#52BE65",
+            "purple": "#BE95FF",
+            "red": "#EE5396",
+            "selectionBackground": "#525252",
+            "white": "#F2F4F8",
+            "yellow": "#FF7EB6"
+        }
+    ],
+    "tabSwitcherMode": "inOrder",
+    "themes": []
+}
