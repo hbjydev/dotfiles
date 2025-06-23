@@ -1,0 +1,7 @@
+{{ if eq .chezmoi.os "windows" }}
+
+$env:XDG_CONFIG_HOME = "$env:UserProfile\.config"
+& "C:\Program Files\GitHub CLI\gh.exe" auth setup-git --hostname github.com
+
+# vim:ft=ps1
+{{ end }}

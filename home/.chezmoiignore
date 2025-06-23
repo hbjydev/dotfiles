@@ -4,3 +4,12 @@ Library
 {{ end }}
 .oh-my-zsh/cache/completions
 .oh-my-zsh/cache/grep-alias
+
+{{ if ne .chezmoi.os "windows" }}
+.chezmoiscripts/windows/**
+Documents
+{{ else }}
+.config/ghostty
+.config/git/cookies
+.zshrc
+{{ end }}

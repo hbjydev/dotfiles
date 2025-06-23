@@ -1,0 +1,34 @@
+$env:Path += ";$env:UserProfile\.local\bin"
+$env:XDG_CONFIG_HOME = "$env:UserProfile\.config"
+
+Invoke-Expression (&starship init powershell)
+Invoke-Expression (& { (mise activate pwsh) | Out-String })
+
+Remove-Alias -Name cat -Force
+Remove-Alias -Name ls -Force
+
+function cat { & "bat" $args }
+
+New-Alias "g" "git"
+
+function _kubectl { kubectl $args }
+function k { kubectl $args }
+function kj { kubectl -o json $args }
+function ky { kubectl -o yaml $args }
+function kw { kubectl -o wide $args }
+
+New-Alias "lg" "lazygit"
+
+function _eza { & "eza" --icons --git $args }
+function ls { _eza $args }
+function ll { _eza -l $args }
+function la { _eza -a $args }
+function lla { _eza -al $args }
+function lt { _eza --tree $args }
+
+function ops { op run --no-masking $args }
+
+New-Alias "vi" "nvim"
+New-Alias "vim" "nvim"
+
+# vim:ft=ps1

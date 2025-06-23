@@ -1,0 +1,17 @@
+{{ if eq .chezmoi.os "windows" }}
+
+# Ensure up-to-date PowerShell
+winget install --silent --id Microsoft.PowerShell
+
+# My toolchain
+winget install --silent --id Starship.Starship
+winget install --silent --id sharkdp.bat
+winget install --silent --id eza-community.eza
+winget install --silent --id Neovim.Neovim
+winget install --silent --id Kubernetes.kubectl
+winget install --silent --id jdx.mise
+winget install --silent --id GitHub.cli
+winget install --silent --id JesseDuffield.lazygit
+
+# vim:ft=ps1
+{{ end }}

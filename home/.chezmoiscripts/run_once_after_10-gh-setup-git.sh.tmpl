@@ -1,5 +1,7 @@
+{{ if ne .chezmoi.os "windows" }}
 #!/usr/bin/env bash
 
 {{ .brewPath }}/bin/gh auth setup-git --hostname github.com
 
 # vim:ft=bash
+{{ end }}

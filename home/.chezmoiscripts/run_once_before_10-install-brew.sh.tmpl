@@ -1,3 +1,4 @@
+{{ if ne .chezmoi.os "windows" }}
 #!/usr/bin/env bash
 
 if [[ "$(uname -s)" == "Linux" ]]; then
@@ -25,3 +26,4 @@ else
 fi
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+{{ end }}
