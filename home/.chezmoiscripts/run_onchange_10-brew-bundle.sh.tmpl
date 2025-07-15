@@ -13,14 +13,7 @@ brew "gh"
 brew "git"
 brew "git-delta"
 brew "glab"
-brew "helm"
 brew "jq"
-brew "k9s"
-brew "krew"
-brew "kubeconform"
-brew "kubectx"
-brew "kubernetes-cli"
-brew "kustomize"
 brew "lazygit"
 brew "neovim"
 brew "mise"
@@ -33,11 +26,20 @@ brew "tree-sitter"
 brew "trivy"
 brew "uv"
 brew "viddy"
-brew "volta"
+
+# kubernetes
+brew "helm"
+brew "k9s"
+brew "krew"
+brew "kubeconform"
+brew "kubectx"
+brew "kubernetes-cli"
+brew "kustomize"
 
 # os-specific
 brew "mysql-client@8.0" if OS.mac?
 brew "nginx" if OS.mac?
+cask "1password" if OS.mac?
 cask "1password-cli" if OS.mac?
 cask "amazon-chime" if OS.mac?
 cask "arc" if OS.mac?
@@ -49,6 +51,7 @@ cask "orbstack" if OS.mac?
 cask "raycast" if OS.mac?
 cask "slack" if OS.mac?
 cask "spotify" if OS.mac?
+
 mas "1Password for Safari", id: 1569813296
 mas "AdGuard for Safari", id: 1440147259
 mas "Dark Reader for Safari", id: 1438243180
