@@ -1,0 +1,26 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/usr/bin/env bash
+
+defaults write NSGlobalDomain "AppleInterfaceStyle" -string "Dark"
+defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true"
+defaults write NSGlobalDomain AppleKeyboardUIMode -int "2"
+defaults write NSGlobalDomain "NSDocumentSaveNewDocumentsToCloud" -bool "false"
+
+defaults write com.apple.screencapture "location" -string "~/Pictures"
+
+defaults write com.apple.finder "AppleShowAllExtensions" -bool "true"
+defaults write com.apple.finder "AppleShowAllFiles" -bool "true"
+defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
+defaults write com.apple.finder "ShowPathbar" -bool "true"
+defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"
+
+defaults write com.apple.dock "tilesize" -int "46"
+defaults write com.apple.dock "show-recents" -int "0"
+
+defaults write com.apple.ActivityMonitor "UpdatePeriod" -int "2"
+
+killall Finder
+killall Dock
+killall Activity\ Monitor
+killall SystemUIServer
+{{- end -}}
