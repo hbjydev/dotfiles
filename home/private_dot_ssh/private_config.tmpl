@@ -16,6 +16,8 @@ Host *
   ServerAliveCountMax 3
   HashKnownHosts no
   UserKnownHostsFile ~/.ssh/known_hosts
+  {{- if ne .chezmoi.os "windows" }}
   ControlMaster auto
   ControlPath /tmp/ssh.%r.%n.%p
   ControlPersist 10m
+  {{- end -}}
