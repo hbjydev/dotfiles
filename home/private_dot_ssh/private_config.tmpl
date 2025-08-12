@@ -1,6 +1,9 @@
 {{ if stat (joinPath .chezmoi.homeDir ".orbstack") -}}
 Include ~/.orbstack/ssh/config
 {{- end }}
+{{ if stat (joinPath .chezmoi.homeDir ".config/colima") -}}
+Include /Users/hyoung/.config/colima/ssh_config
+{{- end }}
 Include ~/.ssh/config.d/*
 
 Host *
