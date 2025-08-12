@@ -37,21 +37,16 @@ brew "kubernetes-cli"
 brew "kustomize"
 
 # os-specific
-brew "mysql-client@8.0" if OS.mac?
-brew "nginx" if OS.mac?
 cask "1password" if OS.mac?
 cask "1password-cli" if OS.mac?
-cask "amazon-chime" if OS.mac?
-cask "arc" if OS.mac?
 cask "discord" if OS.mac?
 cask "ghostty" if OS.mac?
 cask "keymapp" if OS.mac?
-cask "microsoft-teams" if OS.mac?
-cask "orbstack" if OS.mac?
+brew "lima" if OS.mac?
 cask "raycast" if OS.mac?
-cask "slack" if OS.mac?
 cask "spotify" if OS.mac?
 
+{{ if ne .workspace "work" -}}
 mas "1Password for Safari", id: 1569813296
 mas "AdGuard for Safari", id: 1440147259
 mas "Dark Reader for Safari", id: 1438243180
@@ -61,5 +56,6 @@ mas "Parcel", id: 639968404
 mas "PayPal Honey", id: 1472777122
 mas "Xcode", id: 497799835
 mas "Yubico Authenticator", id: 1497506650
+{{ end -}}
 EOF
 {{- end -}}
