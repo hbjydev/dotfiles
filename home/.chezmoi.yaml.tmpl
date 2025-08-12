@@ -26,7 +26,7 @@ data:
     {{- if contains $workspace "work" }}
     name: Hayden Young
     email: {{ onepasswordRead "op://dots/git/email-work" | quote }}
-    signingKey: {{ onepasswordRead "op://ZOO Digital/ssh-zoo/public key" | quote }}
+    signingKey: {{ onepasswordRead "op://Acquired.com/ssh-acquired/public key" | quote }}
     {{- else }}
     name: Hayden Young
     email: {{ onepasswordRead "op://dots/git/email-personal" | quote }}
