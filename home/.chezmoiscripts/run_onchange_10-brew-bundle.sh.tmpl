@@ -37,14 +37,15 @@ brew "kubernetes-cli"
 brew "kustomize"
 
 # os-specific
+brew "colima" if OS.mac?
+brew "docker" if OS.mac?
+brew "docker-compose" if OS.mac?
+brew "lima" if OS.mac?
 cask "1password" if OS.mac?
 cask "1password-cli" if OS.mac?
 cask "discord" if OS.mac?
 cask "ghostty" if OS.mac?
 cask "keymapp" if OS.mac?
-brew "docker" if OS.mac?
-brew "lima" if OS.mac?
-brew "colima" if OS.mac?
 cask "raycast" if OS.mac?
 cask "spotify" if OS.mac?
 
