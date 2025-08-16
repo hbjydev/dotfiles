@@ -52,6 +52,7 @@ cask "keymapp" if OS.mac?
 cask "raycast" if OS.mac?
 cask "spotify" if OS.mac?
 
+{{ if eq .chezmoi.os "darwin" -}}
 {{ if ne .workspace "work" -}}
 mas "1Password for Safari", id: 1569813296
 mas "AdGuard for Safari", id: 1440147259
@@ -62,6 +63,7 @@ mas "Parcel", id: 639968404
 mas "PayPal Honey", id: 1472777122
 mas "Xcode", id: 497799835
 mas "Yubico Authenticator", id: 1497506650
+{{ end -}}
 {{ end -}}
 EOF
 {{- end -}}
