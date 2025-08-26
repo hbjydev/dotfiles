@@ -1,0 +1,12 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "system",
+
+  // Model config
+  "model": "github-copilot/claude-sonnet-4",
+  "small_model": "github-copilot/gpt-5-mini",
+
+  // Other
+  "share": "disabled",
+  "instructions": ["AGENTS.md", "CONTRIBUTING.md", ".github/copilot-instructions.md", "CLAUDE.md"]
+}
