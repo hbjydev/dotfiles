@@ -4,12 +4,12 @@ Include ~/.orbstack/ssh/config
 {{ if stat (joinPath .chezmoi.homeDir ".config/colima") -}}
 Include /Users/hyoung/.config/colima/ssh_config
 {{- end }}
-Include ~/.ssh/config.d/*
+Include ~/.ssh/conf.d/*
 
 Host *
   SetEnv TERM="xterm-256color"
   User {{ if contains .workspace "work" }}hyoung{{ else }}hayden{{ end }}
-  IdentityAgent ~/.1password/agent.sock
+  IdentityAgent {{ .ssh.agentPath | quote }}
 
 Host *
   ForwardAgent yes

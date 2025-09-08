@@ -2,36 +2,45 @@
 #!/bin/bash
 
 brew bundle --file=/dev/stdin <<EOF
+tap "sst/tap"
+
+brew "act"
 brew "age"
+brew "asciinema"
 brew "awscli"
 brew "azure-cli"
 brew "bat"
 brew "chezmoi"
 brew "eza"
+brew "findutils"
 brew "gh"
 brew "git"
 brew "git-delta"
 brew "glab"
+brew "gnu-getopt"
 brew "jq"
 brew "lazygit"
-brew "neovim"
 brew "mise"
-brew "opentofu"
+brew "mkcert"
+brew "neovim"
 brew "ripgrep"
 brew "sops"
+brew "sst/tap/opencode"
 brew "starship"
-brew "terraform-docs"
 brew "tree-sitter"
 brew "uv"
 brew "viddy"
 
 # containers
 brew "colima"
+brew "ctlptl"
+brew "dive"
 brew "docker"
+brew "docker"
+brew "docker-buildx"
 brew "docker-compose"
 brew "lima"
 brew "trivy"
-brew "ctlptl"
 
 # kubernetes
 brew "helm"
@@ -48,17 +57,15 @@ cask "1password-cli" if OS.mac?
 cask "discord" if OS.mac?
 cask "ghostty" if OS.mac?
 cask "keymapp" if OS.mac?
+cask "lm-studio" if OS.mac?
 cask "raycast" if OS.mac?
 cask "spotify" if OS.mac?
+cask "visual-studio-code" if OS.mac?
 
 {{ if ne .workspace "work" -}}
-mas "1Password for Safari", id: 1569813296
-mas "AdGuard for Safari", id: 1440147259
-mas "Dark Reader for Safari", id: 1438243180
 mas "Keynote", id: 409183694
 mas "Keyword Search", id: 1558453954
 mas "Parcel", id: 639968404
-mas "PayPal Honey", id: 1472777122
 mas "Xcode", id: 497799835
 mas "Yubico Authenticator", id: 1497506650
 {{ end -}}

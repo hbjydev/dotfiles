@@ -8,5 +8,8 @@ fi
 if [[ -d "$HOME/.cache/.bun" ]]; then
   export PATH="$PATH:$HOME/.cache/.bun/bin"
 fi
+if [[ -d "$HOME/.lmstudio/bin" ]]; then
+  export PATH="$PATH:$HOME/.lmstudio/bin"
+fi
 
 # vim:ft=zsh

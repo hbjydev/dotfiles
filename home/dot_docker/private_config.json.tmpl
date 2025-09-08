@@ -1,6 +1,12 @@
+{{- $ghcrToken := onepasswordRead "op://dots/gh-cli-token/password" -}}
+{{- $ghcrAuth := (printf "%s:%s" "hbjydev" $ghcrToken) | b64enc -}}
 {
   "cliPluginsExtraDirs": ["{{ .brewPath }}/lib/docker/cli-plugins"],
-  "auths": {},
+  "auths": {
+    "ghcr.io": {
+      "auth": "{{ $ghcrAuth }}"
+    }
+  },
   "currentContext": "colima",
   "credHelpers": {
     "gcr.io": "gcloud",
@@ -8,6 +14,7 @@
     "eu.gcr.io": "gcloud",
     "asia.gcr.io": "gcloud",
     "staging-k8s.gcr.io": "gcloud",
-    "marketplace.gcr.io": "gcloud"
+    "marketplace.gcr.io": "gcloud",
+    "europe-west2-docker.pkg.dev": "gcloud"
   }
 }
