@@ -1,9 +1,10 @@
+---
+version: 1
+editor: nvim
+git_protocol: https
 aliases:
   clone: repo clone
   co: pr checkout
   pr: pr create --web
   pv: pr view --web
   v: repo view --web
-editor: nvim
-git_protocol: https
-version: 1
