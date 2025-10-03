@@ -3,8 +3,8 @@
   "theme": "system",
 
   // Model config
-  "model": "github-copilot/claude-sonnet-4",
-  "small_model": "github-copilot/gpt-5-mini",
+  "model": "github-copilot/claude-sonnet-4.5",
+  "small_model": "github-copilot/claude-sonnet-4.5",
 
   // Other
   "share": "disabled",
