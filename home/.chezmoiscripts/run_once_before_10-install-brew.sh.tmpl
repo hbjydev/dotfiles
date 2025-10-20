@@ -13,6 +13,10 @@ if [[ "$(uname -s)" == "Linux" ]]; then
       sudo dnf group install 'Development Tools'
       sudo dnf install procps-ng curl file
       ;;
+    *fedora* )
+      sudo dnf group install development-tools
+      sudo dnf install procps-ng curl file
+      ;;
     *debian* )
       sudo apt-get install build-essential procps curl file git
       ;;

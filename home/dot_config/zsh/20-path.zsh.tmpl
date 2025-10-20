@@ -5,6 +5,9 @@ eval "$(starship init zsh)"
 if [[ -d "$HOME/.bun" ]]; then
   export PATH="$PATH:$HOME/.bun/bin"
 fi
+if [[ -d "$HOME/.dotnet/tools" ]]; then
+  export PATH="$PATH:$HOME/.dotnet/tools"
+fi
 if [[ -d "$HOME/.cache/.bun" ]]; then
   export PATH="$PATH:$HOME/.cache/.bun/bin"
 fi
