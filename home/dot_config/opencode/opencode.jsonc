@@ -6,6 +6,22 @@
   "model": "github-copilot/claude-sonnet-4.5",
   "small_model": "github-copilot/claude-sonnet-4.5",
 
+  // MCP Servers
+  "mcp": {
+    "gh_grep": {
+      "type": "remote",
+      "url": "https://mcp.grep.app"
+    },
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "sequential_thinking": {
+      "type": "local",
+      "command": ["bunx", "@modelcontextprotocol/server-sequential-thinking"]
+    }
+  },
+
   // Other
   "share": "disabled",
   "instructions": ["AGENTS.md", "CONTRIBUTING.md", ".github/copilot-instructions.md", "CLAUDE.md"]
