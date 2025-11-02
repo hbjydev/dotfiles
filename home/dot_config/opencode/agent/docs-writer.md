@@ -1,6 +1,7 @@
 ---
 description: Writes and maintains project documentation
 mode: subagent
+model: github-copilot/claude-sonnet-4.5
 tools:
   bash: false
 ---
