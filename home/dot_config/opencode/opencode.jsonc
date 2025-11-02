@@ -22,6 +22,14 @@
     }
   },
 
+  // LSP Servers
+  "lsp": {
+    "roslyn": {
+      "command": ["roslyn", "--logLevel=Information", "--extensionLogDirectory=/home/hayden/.local/state/opencode/lsp/roslyn", "--stdio"],
+      "extensions": [".cs"]
+    }
+  },
+
   // Other
   "share": "disabled",
   "instructions": ["AGENTS.md", "CONTRIBUTING.md", ".github/copilot-instructions.md", "CLAUDE.md"]
