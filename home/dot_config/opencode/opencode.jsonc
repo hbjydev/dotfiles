@@ -19,6 +19,10 @@
     "sequential_thinking": {
       "type": "local",
       "command": ["bunx", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "atlassian": {
+      "type": "local",
+      "command": ["bunx", "mcp-remote", "https://mcp.atlassian.com/v1/sse"]
     }
   },
 
