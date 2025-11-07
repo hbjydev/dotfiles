@@ -31,6 +31,13 @@
     "roslyn": {
       "command": ["roslyn", "--logLevel=Information", "--extensionLogDirectory=/home/hayden/.local/state/opencode/lsp/roslyn", "--stdio"],
       "extensions": [".cs"]
+    },
+    "intelephense": {
+      "command": ["$HOME/.local/share/nvim/mason/bin/intelephense", "--stdio"],
+      "extensions": [".php"],
+      "initialization": {
+        "licenceKey": "$HOME/.config/nvim/intelephense.key"
+      }
     }
   },
 
