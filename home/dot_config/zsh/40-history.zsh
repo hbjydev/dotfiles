@@ -1,3 +1,5 @@
+eval "$(atuin init zsh)"
+
 HISTSIZE="10000"
 SAVEHIST="10000"
 HISTFILE="$HOME/.zsh_history"
