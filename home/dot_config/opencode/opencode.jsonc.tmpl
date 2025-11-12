@@ -1,3 +1,4 @@
+// vim:ft=jsonc
 {
   "$schema": "https://opencode.ai/config.json",
   "theme": "system",
@@ -29,14 +30,14 @@
   // LSP Servers
   "lsp": {
     "roslyn": {
-      "command": ["roslyn", "--logLevel=Information", "--extensionLogDirectory=/home/hayden/.local/state/opencode/lsp/roslyn", "--stdio"],
+      "command": ["{{ .chezmoi.homeDir }}/.local/share/nvim/mason/bin/roslyn", "--logLevel=Information", "--extensionLogDirectory={{ .chezmoi.homeDir }}/.local/state/opencode/lsp/roslyn", "--stdio"],
       "extensions": [".cs"]
     },
     "intelephense": {
-      "command": ["$HOME/.local/share/nvim/mason/bin/intelephense", "--stdio"],
+      "command": ["{{ .chezmoi.homeDir }}/.local/share/nvim/mason/bin/intelephense", "--stdio"],
       "extensions": [".php"],
       "initialization": {
-        "licenceKey": "$HOME/.config/nvim/intelephense.key"
+        "licenceKey": "{{ .chezmoi.homeDir }}/.config/nvim/intelephense.key"
       }
     }
   },
