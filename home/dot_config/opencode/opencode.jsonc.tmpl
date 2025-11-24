@@ -9,6 +9,13 @@
 
   // MCP Servers
   "mcp": {
+    "github": {
+      "type": "remote",
+      "url": "https://api.githubcopilot.com/mcp",
+      "headers": {
+        "Authorization": "Bearer {{ onepasswordRead "op://dots/gh-cli-token/password" }}"
+      }
+    },
     "gh_grep": {
       "type": "remote",
       "url": "https://mcp.grep.app"
