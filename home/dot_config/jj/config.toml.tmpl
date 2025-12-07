@@ -1,0 +1,10 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[signing]
+behavior = "own"
+backend = "ssh"
+key = {{ .git.signingKey | quote }}
+
+[user]
+name = {{ .git.name | quote }}
+email = {{ .git.email | quote }}
