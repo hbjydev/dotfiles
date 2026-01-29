@@ -15,11 +15,11 @@
   // MCP Servers
   "mcp": {
     "github": {
-      "type": "remote",
-      "url": "https://api.githubcopilot.com/mcp",
+      "type": "local",
+      "command": ["github-mcp-server", "stdio"],
       "enabled": true,
-      "headers": {
-        "Authorization": "Bearer {{ onepasswordRead "op://dots/gh-cli-token/password" }}"
+      "environment": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "{{ onepasswordRead "op://dots/gh-cli-token/password" }}"
       }
     },
     "gh_grep": {
@@ -64,6 +64,17 @@
       }
     }
   },
+
+  // Local LLMs
+  "provider": {
+    "lmstudio": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LM Studio",
+      "options": {
+        "baseURL": "http://127.0.0.1:1234/v1"
+      }
+    }
+  }
 
   // Other
   "share": "disabled",
