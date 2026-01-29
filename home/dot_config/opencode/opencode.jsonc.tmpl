@@ -19,7 +19,8 @@
       "command": ["github-mcp-server", "stdio"],
       "enabled": true,
       "environment": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "{{ onepasswordRead "op://dots/gh-cli-token/password" }}"
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "{{ onepasswordRead "op://dots/gh-cli-token/password" }}",
+        "GITHUB_TOOLSETS": "default,gists,actions,context,security_advisories,users,copilot_spaces,copilot"
       }
     },
     "gh_grep": {
