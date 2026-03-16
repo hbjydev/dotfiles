@@ -1,0 +1,22 @@
+{
+  "env": {
+    "ENABLE_LSP_TOOL": "1",
+    "GITHUB_PERSONAL_ACCESS_TOKEN": "{{ onepasswordRead "op://dots/gh-cli-token/password" }}"
+  },
+  "model": "sonnet",
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/scripts/status-line.sh"
+  },
+  "enabledPlugins": {
+    "atlassian@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "csharp-lsp@claude-plugins-official": true,
+    "php-lsp@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true
+  },
+  "effortLevel": "medium",
+  "voiceEnabled": true
+}
