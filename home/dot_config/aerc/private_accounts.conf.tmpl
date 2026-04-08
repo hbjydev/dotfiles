@@ -1,0 +1,10 @@
+[fastmail]
+source       = jmap+oauthbearer://:{{ onepasswordRead "op://dots/fastmail-token/credential" }}@api.fastmail.com/jmap/session
+outgoing     = jmap://
+default      = INBOX
+from         = Hayden Young <hayden@hayden.moe>
+use-labels   = true
+cache-state  = true
+cache-blobs  = false
+folders-sort = Inbox
+default      = Inbox
