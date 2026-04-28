@@ -21,6 +21,7 @@ alias -- lla='eza -la'
 alias -- ls=eza
 alias -- lt='eza --tree'
 alias -- nb='nix build --json --no-link --print-build-logs'
+alias -- nd="nix develop --command $SHELL"
 alias -- ops='op run --no-masking'
 alias -- s='doppler run'
 alias -- tf=terraform
