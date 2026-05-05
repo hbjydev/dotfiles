@@ -1,0 +1,14 @@
+{{- $provider := "opencode-go" -}}
+{{- $model := "kimi-k2.6" -}}
+{{- if eq .workspace "work" }}{{- $provider = "github-copilot" -}}{{- $model = "claude-sonnet-4.6" -}}{{- end -}}
+{
+  "defaultProvider": "{{ $provider }}",
+  "defaultModel": "{{ $model }}",
+  "defaultThinkingLevel": "medium",
+  "theme": "oxocarbon",
+  "lastChangelogVersion": "0.72.1",
+
+  "packages": [
+    "npm:@juicesharp/rpiv-ask-user-question"
+  ]
+}
