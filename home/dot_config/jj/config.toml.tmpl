@@ -5,6 +5,15 @@ behavior = "own"
 backend = "ssh"
 key = {{ .git.signingKey | quote }}
 
+# ssh signing via 1p
+{{ if eq .chezmoi.os "darwin" -}}
+backends.ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+{{ else if eq .chezmoi.os "windows" -}}
+backends.ssh.program = "{{ .chezmoi.homeDir }}/AppData/Local/1Password/app/8/op-ssh-sign.exe"
+{{ else -}}
+backends.ssh.program = "/opt/1Password/op-ssh-sign"
+{{- end }}
+
 [user]
 name = {{ .git.name | quote }}
 email = {{ .git.email | quote }}
