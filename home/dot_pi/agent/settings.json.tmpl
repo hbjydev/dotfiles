@@ -1,14 +1,32 @@
 {{- $provider := "opencode-go" -}}
 {{- $model := "kimi-k2.6" -}}
-{{- if eq .workspace "work" }}{{- $provider = "github-copilot" -}}{{- $model = "claude-sonnet-4.6" -}}{{- end -}}
+{{- $lightModel := "deepseek-v4-flash" -}}
+
+{{- if eq .workspace "work" }}
+{{- $provider = "github-copilot" -}}
+{{- $model = "claude-sonnet-4.6" -}}
+{{- $lightModel = "claude-haiku-4.5" -}}
+{{- end -}}
+
 {
   "defaultProvider": "{{ $provider }}",
   "defaultModel": "{{ $model }}",
   "defaultThinkingLevel": "medium",
   "theme": "oxocarbon",
-  "lastChangelogVersion": "0.72.1",
+  "lastChangelogVersion": "0.73.0",
 
   "packages": [
-    "npm:@juicesharp/rpiv-ask-user-question"
-  ]
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:@juicesharp/rpiv-todo",
+    "npm:@aliou/pi-guardrails",
+    "npm:pi-subagents"
+  ],
+
+  "subagents": {
+    "agentOverrides": {
+      "explore": {
+        "model": "{{ $lightModel }}"
+      }
+    }
+  }
 }

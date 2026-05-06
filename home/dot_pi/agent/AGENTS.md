@@ -1,8 +1,10 @@
 # System
 
-## General Instructions
+## General Rules
 
-- **Questions:** ALWAYS use the `ask_user_questions` tool when asking questions for better UX
+- ALWAYS use the `ask_user_questions` tool when asking questions for better UX
+- When asked to explore, understand, or investigate the codebase, always
+  delegate to the `explore` subagent before responding.
 
 ## Writing Style
 
