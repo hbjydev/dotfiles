@@ -35,13 +35,7 @@
       "type": "local",
       "command": ["bunx", "@modelcontextprotocol/server-sequential-thinking"],
       "enabled": true
-    }{{- if eq .workspace "work" }},
-    "atlassian": {
-      "type": "local",
-      "command": ["bunx", "mcp-remote", "https://mcp.atlassian.com/v1/sse"],
-      "enabled": true
     }
-    {{- end }}
   },
 
   // Other
