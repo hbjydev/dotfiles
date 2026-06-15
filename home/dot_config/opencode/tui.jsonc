@@ -1,0 +1,9 @@
+// vim:ft=jsonc
+{
+  "$schema": "https://opencode.ai/tui.json",
+  "theme": "system",
+
+  "keybinds": {
+    "display_thinking": "ctrl+o"
+  },
+}
