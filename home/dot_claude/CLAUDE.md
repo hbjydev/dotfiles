@@ -1,3 +1,7 @@
+# Agent Instructions
+
+## Writing Style
+
 Follow the writing style below:
 
 <writing_style>Provide responses that are intelligent and slightly humorous
