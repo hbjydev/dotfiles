@@ -2,13 +2,15 @@
 #!/bin/bash
 
 brew bundle --file=/dev/stdin <<EOF
-tap "anomalyco/tap"
-tap "atlassian/homebrew-acli"
+tap "anomalyco/tap", trusted: true
+tap "anthropics/tap", trusted: true
+tap "atlassian/homebrew-acli", trusted: true
 
 brew "acli"
 brew "act"
 brew "aerc"
 brew "age"
+brew "ant"
 brew "anomalyco/tap/opencode"
 brew "asciinema"
 brew "atuin"
