@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+rtime="$(date +%Y-%m-%d_%H-%M-%S)"
+rdir="$HOME/Movies/asciinema/${rtime}"
+rcast="$rdir/rec.cast"
+rgif="$rdir/rec.gif"
+
+asciinema rec "${rcast}" "$@"
+
+agg "${rcast}" "${rgif}" --cols 80 --rows 24
+
+echo "gif saved to ${rgif}"
