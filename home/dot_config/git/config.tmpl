@@ -61,6 +61,14 @@
   helper =
   helper = "!{{ .brewPath }}/bin/gh auth git-credential"
 
-[credential "https://forgejo.hayden.moe"]
-  helper = cache --timeout 21600
-  helper = oauth
+[credential "https://git.hayden.moe"]
+  helper =
+  helper = "!{{ .brewPath }}/bin/tea login helper"
+
+[credential "https://git.ow-ops.eu"]
+  helper =
+  helper = "!{{ .brewPath }}/bin/tea login helper"
+
+[credential "https://git.sable.moe"]
+  helper =
+  helper = "!{{ .brewPath }}/bin/tea login helper"
