@@ -7,7 +7,7 @@
 {{- if eq .chezmoi.os "darwin" -}}{{- $brewPath = "/opt/homebrew" -}}
 {{- else -}}{{- $brewPath = "/home/linuxbrew/.linuxbrew" -}}{{- end -}}
 
-{{- $misePath := cat .chezmoi.homeDir "/.local/share/mise/shims" -}}
+{{- $misePath := printf "%s/%s" .chezmoi.homeDir ".local/share/mise/shims" -}}
 
 {{- $sshAgentPath := "" -}}
 {{- if eq .chezmoi.os "darwin" -}}{{- $sshAgentPath = "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock" -}}
