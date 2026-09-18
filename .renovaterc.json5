@@ -3,4 +3,7 @@
   extends: [
     "local>hayden/renovate-config",
   ],
+  mise: {
+    managerFilePatterns: ["**/dot_config/mise/config.toml"]
+  }
 }
