@@ -5,21 +5,92 @@ jobs = 4
 raw = false
 pipx.uvx = true
 python.uv_venv_auto = true
-npm.package_manager = "bun"
+auto_env = true
+
+[bootstrap.brew]
+adopt = true
+
+[bootstrap.packages]
+"brew:act" = "latest"
+"brew:age" = "latest"
+"brew:asciinema" = "latest"
+"brew:atuin" = "latest"
+"brew:awscli" = "latest"
+"brew:bat" = "latest"
+"brew:chezmoi" = "latest"
+"brew:difftastic" = "latest"
+"brew:eza" = "latest"
+"brew:findutils" = "latest"
+"brew:forgejo-cli" = "latest"
+"brew:gh" = "latest"
+"brew:git" = "latest"
+"brew:gnu-getopt" = "latest"
+"brew:jj" = "latest"
+"brew:jq" = "latest"
+"brew:lazygit" = "latest"
+"brew:mkcert" = "latest"
+"brew:neovim" = "latest"
+"brew:pi-coding-agent" = "latest"
+"brew:ripgrep" = "latest"
+"brew:sequoia-sq" = "latest"
+"brew:sops" = "latest"
+"brew:starship" = "latest"
+"brew:tree-sitter" = "latest"
+"brew:tree-sitter-cli" = "latest"
+"brew:usage" = "latest"
+"brew:uv" = "latest"
+"brew:viddy" = "latest"
+"brew:w3m" = "latest"
+"brew:zellij" = "latest"
+
+# kubernetes
+"brew:krew" = "latest"
+"brew:kubeconform" = "latest"
+"brew:kubectx" = "latest"
+"brew:kustomize" = "latest"
+
+# macos-only
+"brew-cask:1password" = "latest"
+"brew-cask:1password-cli" = "latest"
+"brew-cask:discord" = "latest"
+"brew-cask:ghostty" = "latest"
+"brew-cask:keymapp" = "latest"
+"brew-cask:raycast" = "latest"
+"brew-cask:spotify" = "latest"
+"brew-cask:visual-studio-code" = "latest"
+
+[bootstrap.services.colima]
+scope = "user"
+command = "colima start -f"
+restart = "on-failure"
+enabled = true
 
 [tools]
-bun = "latest"
-go = "latest"
+# languages
 node = "latest"
-pnpm = "latest"
-rust = "latest"
-zig = "latest"
-dotnet = "latest"
-"asdf:mise-plugins/mise-gcloud" = "latest"
 fnox = "latest"
 pitchfork = "latest"
-"go:github.com/github/github-mcp-server/cmd/github-mcp-server" = "v0.30.2"
+
+# dev tooling
+codex = "0.153.4"
+"npm:opencode-ai" = "1.18.31"
 "github:can1357/oh-my-pi" = "latest"
+"asdf:mise-plugins/mise-gcloud" = "latest"
+
+# containers
+kubectl = "1.37.0"
+colima = "0.10.3"
+docker-cli = "29.8.1"
+docker-compose = "5.5.1"
+"aqua:docker/buildx" = "0.37.1"
+lima = "2.2.0"
+trivy = "0.74.0"
+helm = "4.3.0"
+"github:nklmilojevic/sofka" = "0.28.1"
+
+# other
 "pipx:tiddl" = "latest"
 "aqua:asciinema/asciinema" = "latest"
 "aqua:asciinema/agg" = "latest"
+
+# vim:ft=toml
