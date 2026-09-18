@@ -1,8 +1,13 @@
 {{- $ghcrToken := onepasswordRead "op://dots/gh-cli-token/password" -}}
 {{- $ghcrAuth := (printf "%s:%s" "hbjydev" $ghcrToken) | b64enc -}}
+{{- $forgejoToken := onepasswordRead "op://dots/fjo-token/password" -}}
+{{- $forgejoAuth := (printf "%s:%s" "hayden" $forgejoToken) | b64enc -}}
 {
   "cliPluginsExtraDirs": ["{{ .brewPath }}/lib/docker/cli-plugins"],
   "auths": {
+    "git.hayden.moe": {
+      "auth": "{{ $forgejoAuth }}"
+    },
     "ghcr.io": {
       "auth": "{{ $ghcrAuth }}"
     }
