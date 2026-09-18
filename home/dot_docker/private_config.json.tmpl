@@ -3,7 +3,10 @@
 {{- $forgejoToken := onepasswordRead "op://dots/fjo-token/password" -}}
 {{- $forgejoAuth := (printf "%s:%s" "hayden" $forgejoToken) | b64enc -}}
 {
-  "cliPluginsExtraDirs": ["{{ .brewPath }}/lib/docker/cli-plugins"],
+  "cliPluginsExtraDirs": [
+    "{{ .chezmoi.homeDir }}/.local/share/mise/installs/docker-compose/latest",
+    "{{ .chezmoi.homeDir }}/.local/share/mise/installs/aqua-docker-buildx/latest",
+  ],
   "auths": {
     "git.hayden.moe": {
       "auth": "{{ $forgejoAuth }}"
