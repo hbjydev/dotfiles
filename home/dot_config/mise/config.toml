@@ -7,6 +7,9 @@ pipx.uvx = true
 python.uv_venv_auto = true
 auto_env = true
 
+[env]
+CLOUDSDK_PYTHON = { value = "{{ tools.python.path }}/bin/python3", tools = true }
+
 [bootstrap.brew]
 adopt = true
 
@@ -42,6 +45,7 @@ node = "latest"
 fnox = "latest"
 pitchfork = "latest"
 uv = "0.12.16"
+python = "3.14.7"
 
 # dev tooling
 codex = "0.153.4"
