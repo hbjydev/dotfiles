@@ -48,11 +48,11 @@ uv = "0.12.16"
 python = "3.14.7"
 
 # dev tooling
-codex = "0.153.4"
+codex = "0.155.1"
 opencode = "1.18.31"
 "github:can1357/oh-my-pi" = "latest"
 gcloud = "585.0.0"
-"github:perfectra1n/fjo" = "v0.2.1"
+"github:perfectra1n/fjo" = "v0.2.2"
 act = "0.2.89"
 age = "1.3.2"
 atuin = "18.22.0"
