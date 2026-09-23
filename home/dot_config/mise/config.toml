@@ -49,7 +49,7 @@ python = "3.14.7"
 
 # dev tooling
 codex = "0.155.1"
-opencode = "1.18.31"
+opencode = "1.18.32"
 "github:can1357/oh-my-pi" = "latest"
 gcloud = "585.0.0"
 "github:perfectra1n/fjo" = "v0.2.2"
