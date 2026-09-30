@@ -48,7 +48,7 @@ uv = "0.12.18"
 python = "3.14.7"
 
 # dev tooling
-codex = "0.155.1"
+codex = "0.159.2"
 opencode = "1.18.32"
 "github:can1357/oh-my-pi" = "latest"
 gcloud = "585.0.0"
