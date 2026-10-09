@@ -1,7 +1,7 @@
 {{- if ne .chezmoi.os "windows" -}}
 #!/usr/bin/env bash
 
-# hash: {{ includeTemplate "dot_config/mise/config.toml" . | sha256sum }}
+# hash: {{ include "dot_config/mise/config.toml" | sha256sum }}
 mise install
 
 # vim:ft=bash
