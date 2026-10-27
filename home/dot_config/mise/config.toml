@@ -81,7 +81,7 @@ colima = "0.10.3"
 docker-cli = "29.8.1"
 docker-compose = "5.5.1"
 "github:docker/buildx" = { version = "v0.37.1", rename_exe = "docker-buildx" }
-lima = "2.2.0"
+lima = "2.2.1"
 trivy = "0.74.0"
 helm = "4.3.1"
 "github:nklmilojevic/sofka" = "0.28.5"
