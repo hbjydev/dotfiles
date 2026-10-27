@@ -80,7 +80,7 @@ kubectl = "1.37.0"
 colima = "0.10.3"
 docker-cli = "29.9.2"
 docker-compose = "5.6.1"
-"github:docker/buildx" = { version = "v0.37.1", rename_exe = "docker-buildx" }
+"github:docker/buildx" = { version = "v0.38.1", rename_exe = "docker-buildx" }
 lima = "2.2.1"
 trivy = "0.76.1"
 helm = "4.3.1"
