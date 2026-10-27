@@ -44,7 +44,7 @@ enabled = true
 node = "latest"
 fnox = "latest"
 pitchfork = "latest"
-uv = "0.12.18"
+uv = "0.13.6"
 python = "3.15.2"
 
 # dev tooling
