@@ -50,7 +50,7 @@ python = "3.15.2"
 # dev tooling
 herdr = "0.9.5"
 codex = "0.159.2"
-opencode = "1.18.32"
+opencode = "1.19.4"
 "github:can1357/oh-my-pi" = "latest"
 gcloud = "585.0.0"
 "github:perfectra1n/fjo" = "v0.2.6"
