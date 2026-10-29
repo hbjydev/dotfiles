@@ -72,3 +72,10 @@
 [credential "https://git.sable.moe"]
   helper =
   helper = "!{{ .misePath }}/fjo auth git-credential"
+
+[includeIf "gitdir:~/Development/repos/github.com/bitshift-systems/**"]
+  path = ~/.config/git/orgs/bitshift-systems.inc
+[includeIf "gitdir:~/Development/repos/github.com/acquiredcom/**"]
+  path = ~/.config/git/orgs/acquired.inc
+[includeIf "gitdir:~/Development/repos/github.com/acquired-pci/**"]
+  path = ~/.config/git/orgs/acquired.inc
