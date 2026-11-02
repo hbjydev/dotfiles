@@ -15,13 +15,11 @@ adopt = true
 
 [bootstrap.packages]
 "brew:findutils" = "latest"
-"brew:forgejo-cli" = "latest"
 "brew:git" = "latest"
 "brew:gnu-getopt" = "latest"
 "brew:sequoia-sq" = "latest"
 "brew:tree-sitter" = "latest"
 "brew:tree-sitter-cli" = "latest"
-"brew:w3m" = "latest"
 
 # macos-only
 "brew-cask:1password" = "latest"
