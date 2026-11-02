@@ -77,7 +77,7 @@ delta = "0.20.1"
 kubectl = "1.37.1"
 colima = "0.10.3"
 docker-cli = "29.9.2"
-docker-compose = "5.6.1"
+docker-compose = "5.7.0"
 "github:docker/buildx" = { version = "v0.38.1", rename_exe = "docker-buildx" }
 lima = "2.2.1"
 trivy = "0.76.1"
