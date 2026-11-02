@@ -74,7 +74,7 @@ zellij = "0.45.1"
 delta = "0.20.1"
 
 # containers
-kubectl = "1.37.1"
+kubectl = "1.37.2"
 colima = "0.10.3"
 docker-cli = "29.9.2"
 docker-compose = "5.6.1"
